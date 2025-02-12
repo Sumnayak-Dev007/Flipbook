@@ -1,0 +1,473 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+} */
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px;
+    transition-duration: 1s;
+}
+input{
+display: none;
+}
+.book{
+    height: 520px;
+    width: 400px;
+    transform-style: preserve-3d;
+    /* perspective: 1500px; */
+    
+}
+.cover{
+    height: 520px;
+    width: 400px;
+    background-color: #5B99C2;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#front label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#front{
+    z-index: 5;
+    transform-origin: center left;
+    transition: transform ease-in-out 1.5s;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px #4076bd;
+    font-family:cursive;
+    border-radius: 0 15px 15px 0;
+    transition:visibility 0.2s 0.8s;
+
+   
+}
+#h1 img{
+    box-shadow: 1px 1px 10px #176B87;
+    
+}
+#h1 h2{
+    position: absolute;
+    top:5rem;
+    display: block;
+    font-family:cursive;
+    font-size: 2.5rem;
+    box-shadow: 1px 1px 10px #176B87;
+    
+}
+#h1 h1{
+    position: absolute;
+    top:1rem;
+    left: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 5px;
+    font-family:cursive;
+    box-shadow: 1px 1px 10px #176B87;
+    
+}
+#ch{
+    position: absolute;
+    top: 14rem;
+    left: 6.5rem;
+    width: 100px;
+    height: 120px;
+    border: 1px solid black;
+    
+}
+#sy{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 15px 15px 0;
+    
+
+}
+#h1 #hr{
+    position: absolute;
+    top: 15rem;
+    left: 0.2rem;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+}
+#h1 #sc{
+    position: absolute;
+    top: 15rem;
+    right: 0.2rem;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+}
+#h1 #br{
+    position: absolute;
+    top: 14rem;
+    right: 6.5rem;
+    width: 100px;
+    height: 120px;
+    border: 1px solid black;
+
+}
+#h1 i{
+    font-size: 3.5rem;
+    position: absolute;
+    font-weight: 2em;
+    top:7rem;
+    left: 19rem;
+    box-shadow: 1px 1px 10px #176B87;
+    
+}
+
+#h1 label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 8;
+}
+#back{
+    z-index: -1;
+    transform-origin: left;
+    transition: transform linear 1s,z-index 0.5s 0.5s;
+}
+#back label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.back2{
+    height: 100%;
+    width: 100%;
+    background-color: #5B99C2;
+    backface-visibility: var(solid);
+    border-radius: 0 15px 15px 0;
+
+}
+.page{
+    height: 500px;
+    width: 380px;
+    background-color: white;
+    position: absolute;
+    margin-top: 9.2px;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    /* transform: rotateY(0deg); */
+    transition: transform 1s;
+}
+.page img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;  
+}
+.front-page{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    padding: 1rem;
+}
+.back-page{
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid rgba(0, 0, 0,0.2);
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 99;
+}
+#page1{
+    z-index: 4;
+}
+#flow{
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    border-radius: 0;
+    background-color: white;
+}
+#page1 #neu{
+    width: 92%;
+    height: 240px;
+    position: absolute;
+    top: 3.5rem;
+    left: 0.8rem;
+    border-radius: 0;
+}
+#page1 h1{
+    position: absolute;
+    top: -1rem;
+    left: 7.54rem;
+}
+#page1 #cont{
+    position: absolute;
+    top: 0rem;
+    left: 3.2rem;
+    text-shadow: 1px 1px 10px white,-1px -1px 10px white;
+
+}
+#page1 a{
+    position: absolute;
+    left: 0.4rem;
+    bottom: 6rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+}
+#page1 #a{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    bottom: 6rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    font-size: 1.2rem;
+    font-weight: 10px;
+    color: black;
+    text-shadow: 0px 0px 10px white,-0px -0px 10px white;
+    box-shadow:8px 8px 6px -6px grey,-8px -8px 6px -6px grey ;
+
+}
+#page2 #sy{
+    position: absolute;
+    left: 0.6rem;
+    top: 3.5rem;
+    width: 95%;
+    height: 200px;
+    border-radius: 0px;
+}
+#page2 h1{
+    position: absolute;
+    top: -1rem;
+    left: 7.54rem;
+}
+
+#page2 #ss{
+    position: absolute;
+    left: 0.4rem;
+    bottom: 6rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+}
+#page2{
+    z-index: 3;
+}
+#page2 #lungs{
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0.1rem;
+    top: 2.8rem;
+    border-radius: 0;
+    box-shadow: 0px 0px 5px grey,
+    
+}
+#page2 h1{
+    position: absolute;
+    top: -1rem;
+    left: 7.54rem;
+}
+#page2 #li{
+    position: absolute;
+    bottom: 2.8rem;
+    left: 8px;
+    font-size: 1rem;
+    font-weight: 8rem;
+}
+#page3 #alvi{
+    width: 95%;
+    height: 350px;
+    position: absolute;
+    top: 0.6rem;
+    left: 0.5rem;
+    border-radius: 10px 10px 10px 10px;
+}
+#page3 #alve{
+    position: absolute;
+    left: 10px;
+    bottom: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+    
+}
+#page3{
+    z-index: 2;
+    transition: transform 1s ,z-index 0.5s 0.5s;
+}
+#page3 #eye{
+    width: 92%;
+    height: 240px;
+    position: absolute;
+    top: 3.5rem;
+    left: 0.8rem;
+    border-radius: 0;
+    border: 2px ridge black;
+}
+#page3 h1{
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+}
+#page3 #quote{
+    position:absolute;
+    left: 0.9rem;
+    bottom: 5rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+    box-shadow: 2px 1px 10px grey, -2px -1px 10px grey;
+}
+#page4 #cere{
+    position: absolute;
+    top: -1.2rem;
+    left: 5rem;
+}
+#page4 video{
+    width: 96%;
+    height: 235px;
+    position: absolute;
+    top: 3.8rem;
+    left: 0.5rem;
+    border-radius: 0;
+    box-shadow: 0px 0px 5px grey;
+}
+#page4 h2{
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+}
+#page4 #on{
+    position: absolute;
+    top: 0.6rem;
+    left: 8rem;
+}
+#page4 #bellum{
+    width: 60%;
+    height: 260px;
+    position: absolute;
+    top: 2.8rem;
+    left: 4.97rem;
+    border-radius: 0;
+    box-shadow: 0px 0px 20px #176B87;
+}
+#page4 a{
+    position:absolute;
+    left: 15px;
+    bottom: 2.2rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+}
+#page4 #ray{
+    position:absolute;
+    left: 0.5px;
+    bottom: -0.6rem;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+}
+
+#page4{
+    z-index: 1;
+    transition: transform 1s ,z-index 0.5s 0.5s;
+}
+#page5{
+    z-index: 0;
+    transition: transform 1s ,z-index 0.5s 0.5s;
+}
+#page5 a{
+    position: absolute;
+    top: 4rem;
+    left: 0.4rem;
+    padding-top: 1.4px;
+    font-size: 1.2rem;
+    font-weight: 10rem;
+    box-shadow: 8px 8px 6px -6px grey,-8px -8px 6px -6px grey;
+}
+.next,.prev{
+    position: absolute;
+    cursor: pointer;
+    bottom: 1rem;
+}
+.next{
+    right: 1rem;
+}
+.prev{
+    left: 1rem;
+}
+h2{
+    text-align: center;
+}
+#checkbox-front:checked ~ .book{
+    transition: transform ease-in-out 1.2s;
+    transform: translateX(200px);
+}
+
+ #checkbox-front:checked ~ .book #front{
+    transition: transform ease-in-out 1.5s,z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 1;  
+}
+#checkbox-front:checked ~ .book #h1{
+    transition: transform 0.5s 0.5s,visibility 0.5s 0.2s;
+    /* transform: rotateY(180deg); */
+    visibility: hidden;
+   
+}
+#checkbox-page1:checked ~ .book #page1{
+    transition: transform ease-in-out 1s,z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+#checkbox-page2:checked ~ .book #page2{
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+#checkbox-page3:checked ~ .book #page3{
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+#checkbox-page4:checked ~ .book #page4{
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+#checkbox-front:checked ~ .book .page{
+    box-shadow: 0 0  5px rgba(0, 0, 0,0.4);
+    
+} 
+#checkbox-page5:checked ~ .book #page5{
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+#checkbox-back:checked ~ .book #back{
+    transition: transform ease-in-out 1.5s;
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+#checkbox-back:checked ~ .book{
+    transition: transform ease-in-out 1.2s;
+    transform: translateX(400px);
+}
+
+
+

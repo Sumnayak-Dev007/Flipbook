@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipBook</title>
+    <link rel="stylesheet" href="css/flip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <input type="checkbox" id="checkbox-front">
+    <input type="checkbox" id="checkbox-back">
+    <input type="checkbox" id="checkbox-page1">
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <input type="checkbox" id="checkbox-page4">
+    <input type="checkbox" id="checkbox-page5">
+    
+
+    <div class="book">
+        <div class="cover" id="front">
+          
+            <label for="checkbox-front"></label>
+                
+            <div class="title" id="h1">
+            <img id="sy" src="images/neuron.png">
+             <img id="sc" src="images/scope.png"> 
+            <img id="ch" src="images/chromo.png" >
+            <img id="hr" src="images/heart.png">
+            <img id="br" src="images/brain.png">
+            <h1>ENCYCLOPEDIA</h1>
+                <h2>SCIENCE</h2><i class="fa-solid fa-flask"></i>
+            <label for="checkbox-front"></label>
+
+            </div>
+        </div>
+        <div class="cover" id="back">
+            <label for="checkbox-back"></label>
+            <div class="back2"></div>
+            <label for="checkbox-back"></label>
+
+        </div>
+        <div class="page" id="page1">
+            <div class="front-page">
+                <a id="a">
+                <h1 id="cont">CONTENTS</h1><br><br><br><hr>
+
+                    <ul>
+                        <li><b>Nourvous system</b></li>
+                        <ul>
+                            <li>Neuron</li>
+                            <li>Synapse</li>
+                        </ul>
+                        <li><b>Respiratory Organs</b></li>
+                        <ul>
+                            <li>Lungs</li>
+                            <li>Alveoli</li>
+                        </ul>
+                        <li><b>Human Eye</b></li>
+                        <ul>
+                            <li>The Eye</li>
+                            <li>Image ON Retina</li>
+                        </ul>
+                        <li><b>Hman Heart</b></li>
+                        <ul>
+                            <li>Human Heart</li>
+                            <li>Functions Of Human Heart</li>
+                        </ul>
+                    </ul>
+                </a>
+                
+                <label class="next" for="checkbox-page1"><i class="fa-solid fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <h1>NEURON</h1>
+                <img id="neu" src="images/cell1.jpg"><br><br>
+                <a >Neuron is a Nerve Cell that is the building block of the Nervous System.They receive and transmit electrochemical signals called nerve impulses to different parts of the body</a>
+                <label class="prev" for="checkbox-page1"><i class="fa-solid fa-chevron-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="front-page">
+                <h1>SYNAPSE</h1>
+                <img id="sy" src="images/synapses.png"><br><br>
+                <a id="ss">A junction between two nerve cells, consisting of a minute gap across which impulses pass by diffusion of a neurotransmitter.</a>
+               
+                <label class="next" for="checkbox-page2"><i class="fa-solid fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <h1>LUNGS</h1>
+                <img id="lungs" src="images/lungs2.png">
+                <a id="li">Lungs are the primary organs of respiration in humans and other vertebrates. They are located on either side of the heart, in the thoracic cavity of the chest. Anatomically, the lungs are spongy organs with an estimates total surface area between 50 to 75 sq meters. The primary function of the lungs is to facilitate the exchange of gases between the blood and the air. Interestingly, the right lung is quite bigger and heavier than the left lung.</a>
+                <label class="prev" for="checkbox-page2"><i class="fa-solid fa-chevron-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="front-page"> 
+                <img id="alvi" src="images/alveoli.jpg">
+                <a id="alve">The alveoli are single-celled sacs of air with thin walls. It facilitates the exchange of oxygen and carbon dioxide molecules into or away from the bloodstream.</a>
+            <label class="next" for="checkbox-page3"><i class="fa-solid fa-chevron-right"></i></label>
+        </div>
+        <div class="back-page">
+            <h1>HUMAN EYE</h1>
+                <img id="eye" src="images/eye.png">  
+                <a id="quote"><b>"The face is the mirror of the mind, and eyes without speaking confess the secrets of the heart." – St. Jerome</b></a> 
+            <label class="prev" for="checkbox-page3"><i class="fa-solid fa-chevron-left"></i></label>
+        </div>
+    </div>
+        <div class="page" id="page4">
+            <div class="front-page">
+                <h2>IMAGE FORMATION</h2>
+                <h2 id="on" >ON RETINA</h2>
+                <video src="images/image.mp4" controls></video>
+                <a id="ray"><ul>
+                    <li>Rays from the top and bottom of the object are traced and produce an inverted real image on the retina.</li>
+                    <li>The retina contains photoreceptors (rods and cones) that convert light into an electric signal.</li>
+                    <li>The brain translates these nerve impulses to form the final image.
+                </li></ul></a>
+                <label class="next" for="checkbox-page4"><i class="fa-solid fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <!-- <h1 id="cere">CEREBELLUM</h1>
+                <img id="bellum" src="cerebellum.png">
+                <a>Cerebellum receives input from other areas of your nervous system It then uses this information to regulate and coordinate voluntary movements.Voluntary movements are movements that you can control, such as walking or throwing a baseball.</a><br> -->
+                <h1 id="cere">HUMAN HEART</h1>
+                <img id="bellum" src="images/heartt.jpg">
+                <a>Your muscular heart, the main organ in your cardiovascular system, is vital for life. Its parts work together to move blood through your body in a coordinated way. It constantly sends oxygen to your cells and takes away waste. Many conditions can affect this organ and keep it from working well.</a>
+                <label class="prev" for="checkbox-page4"><i class="fa-solid fa-chevron-left"></i></label>
+            </div>
+            </div>
+            <div class="page" id="page5">
+                <div class="front-page">
+                    <!-- <a>the cerebellum is also involved in coordination of the following:
+                        <ul>
+                            <li><b>Balance and posture:</b> Your cerebellum works with sensory input from your eyes and ears to keep you upright and steady.</li><hr>
+                            <li><b>Motor learning:</b> This involves the learning and fine-tuning of various movements. Examples include the specific, precise movements used for writing or for riding a bicycle.</li><hr>
+                            <li><b>Speech:</b> The cerebellum is also involved in the movements associated with speaking.</li><hr>
+                            <li><b>processing of emotions:</b>Researchers believe the cerebellum plays a role in thinking, including processing language and mood, as well as attention, fear response, and pleasure or reward response</li>
+                        </ul>
+                    </a> -->
+                    <a>
+                        <b>The human heart has several important function</b>
+                        <ul>
+                            <li><b>Pumping oxygenated blood</b> to other body parts.</li><br>
+                            <li><b>Pumping hormones and other vital substances</b> to different parts of the body.</li><br>
+                            <li><b>Receiving deoxygenated blood</b> and carrying metabolic waste products from the body and pumping it to the lungs for oxygenation.</li><br>
+                            <li><b>Maintaining blood pressure</b></li>
+
+                        </ul>
+                    </a>
+                    <label class="next" for="checkbox-page5"><i class="fa-solid fa-chevron-right"></i></label>
+                
+                </div>
+                <div class="back-page">
+                    <label class="prev" for="checkbox-page5"><i class="fa-solid fa-chevron-left"></i></label>
+                </div>
+            </div>
+           
+    </div>
+</body>
+</html>
